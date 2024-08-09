@@ -8,7 +8,7 @@ def login(request):
     if request.method == "GET":
         return render(request, 'usuarios/login.html')
     else:
-        username = request.POST.get('eamil')
+        username = request.POST.get('email')
         senha =  request.POST.get('senha')
 
         user = authenticate(username = username, password = senha)
